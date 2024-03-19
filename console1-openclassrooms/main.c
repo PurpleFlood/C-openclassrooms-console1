@@ -7,11 +7,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "view.h"
 
 //Appel des fonctions proto
-int triple(int var);
-double airRectangle(double largeur, double longueur);
+
 
 
 int main(int argc, const char * argv[]) {
@@ -97,6 +96,14 @@ int main(int argc, const char * argv[]) {
     printf("Entrez un nombre : ");
     scanf("%d", &nombre);
     printf("Le resultat est : %d\n", triple(nombre));
+    
+    int largeur, longueur;
+    printf("Entrez une largeur : ");
+    scanf("%d", &largeur);
+    printf("Entrez une longueur : ");
+    scanf("%d", &longueur);
+    
+    printf("L'air du rectangle est de %f", airRectangle(largeur, longueur));
     return 0;
 }
 
