@@ -8,6 +8,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+//Appel des fonctions proto
+int triple(int var);
+double airRectangle(double largeur, double longueur);
+
+
 int main(int argc, const char * argv[]) {
     
     // Déclaration de variables
@@ -72,17 +78,32 @@ int main(int argc, const char * argv[]) {
     }
     */
     //Do...while
-    
+    /*
     int compteur = 0;
     do {
         printf("oui test test\n");
         compteur++;
     } while (compteur < 10);
-    
+    */
     //For
+    /*
     int k;
     for (k=0; k<10; k++) {
         printf("test test\n");
     }
+    */
+    // Appelle de fonction
+    int nombre;
+    printf("Entrez un nombre : ");
+    scanf("%d", &nombre);
+    printf("Le resultat est : %d\n", triple(nombre));
     return 0;
+}
+
+//Déclaration des fonctions
+int triple(int var){
+    return var * 3;
+}
+double airRectangle(double largeur, double longueur){
+    return largeur * longueur;
 }
